@@ -1,0 +1,35 @@
+.pointer {
+  cursor: pointer;
+}
+
+.white {
+  color: white !important;
+}
+
+.green {
+  color: green !important;
+}
+
+.left-3 {
+  margin-left: 3%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+#logo {
+  margin-left: -30px;
+  margin-top: -6px;
+  margin-bottom: -5px;
+
+  img {
+    width: 250px;
+  }
+}
+
+.logo-help {
+  margin-top: 0;
+  margin-bottom: 0;
+}

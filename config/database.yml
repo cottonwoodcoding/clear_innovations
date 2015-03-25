@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: clear_innovations_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: clear_innovations_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: clear_innovations
+  pool: 5
