@@ -20,6 +20,7 @@ gem 'modernizr-rails'
 gem 'feedjira'
 gem 'devise'
 gem 'sendgrid'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'pry'
