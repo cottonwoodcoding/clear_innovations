@@ -19,15 +19,17 @@ $ ->
   $('.scroll-top').on 'click', ->
     $('html, body').animate { scrollTop: $('.navbar').offset().top }, 1000
 
-  distance = $('#icons').offset().top
-  table_distance = $('#product').offset().top
-  $window = $(window)
-  $window.scroll ->
-    if $window.scrollTop() >= distance
-      $('.scroll-to-table').removeClass('hide')
-    else
-      $('.scroll-to-table').addClass('hide')
-    if $window.scrollTop() >= table_distance
-      $('.scroll-to-difference').removeClass('hide')
-    else
-      $('.scroll-to-difference').addClass('hide')
+  $(document).ready ->
+    if window.location.pathname == '/'
+      distance = $('#icons').offset().top
+      table_distance = $('#product').offset().top
+      $window = $(window)
+      $window.scroll ->
+        if $window.scrollTop() >= distance
+          $('.scroll-to-table').removeClass('hide')
+        else
+          $('.scroll-to-table').addClass('hide')
+        if $window.scrollTop() >= table_distance
+          $('.scroll-to-difference').removeClass('hide')
+        else
+          $('.scroll-to-difference').addClass('hide')

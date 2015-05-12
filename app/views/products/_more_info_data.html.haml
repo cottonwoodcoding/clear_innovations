@@ -1,0 +1,9 @@
+- about_data.each do |values|
+  .lead.text-center
+    = values[:film_type]
+  %hr
+  %ul
+    - values[:attributes].each do |attr|
+      %li
+        = attr
+

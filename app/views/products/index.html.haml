@@ -1,2 +1,9 @@
-%h1 Products#index
-%p Find me in app/views/products/index.html.haml
+.full-cover
+.product-container
+  .col-xs-12.col-md-5.col-md-offset-1.residential
+    %h2.white.cat.text-center Residential
+    = render partial: 'card', locals: {card_values: residential_cards, cat: 'res'}
+  .col-xs-12.col-md-5.commercial
+    %h2.white.cat.text-center Commercial
+    = render partial: 'card', locals: {card_values: commercial_cards, cat: 'com'}
+= render partial: 'more_info_modal'

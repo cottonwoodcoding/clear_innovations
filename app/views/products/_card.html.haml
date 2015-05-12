@@ -1,0 +1,21 @@
+- card_values.each do |card|
+  .col-xs-12.card-row
+    .col-md-2
+      .control-column.white.text-center.xl-text.pointer
+        = fa_icon 'question-circle', class: 'more-info'
+        = fa_icon 'refresh', class: 'flip flipped'
+        = fa_icon 'envelope', class: 'request'
+    .col-xs-12.col-md-10
+      .card.pointer{id: "#{cat}_#{card[:title].gsub(" ","").gsub("3M™","").gsub("™", "").underscore}"}
+        .front
+          .white
+            %h2.card-title.lead.text-center
+              = card[:title]
+        .back
+          .white
+            .card-back-content
+              %ul
+                - card[:values].each do |val|
+                  %li
+                    %p
+                      = val

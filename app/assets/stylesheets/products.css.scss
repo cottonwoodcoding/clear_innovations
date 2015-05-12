@@ -1,3 +1,38 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@media (max-width: 767px) {
+  .control-column {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+.front, .back, .cat, .control-column {
+  background-color: black;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.control-column {
+  border-radius: 15px;
+  margin-top: 38%;
+}
+
+.front, .back {
+  border-radius: 15px;
+}
+
+.card-back-content {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+  height: 194px;
+}
+
+.back {
+  overflow-y: scroll;
+}
+
+.card-title {
+  margin-top: 20%;
+}

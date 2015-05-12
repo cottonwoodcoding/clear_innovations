@@ -2,7 +2,7 @@
   .cover.bcg.parallax{'gumby-parallax' => '0.5'}
     .logo-wrapper
       = image_tag '3m_dealer.png', class: 'dealer-logo'
-  .scroll-icon.text-center.pointer.white.col-sm-12.hidden-xs
+  .scroll-icon.text-center.pointer.white.col-sm-12.hidden-xs.hidden-sm
     %h4 Scroll To Learn More
     = fa_icon 'chevron-circle-down 3x', class: 'white'
   .col-xs-12.text-center
@@ -16,7 +16,7 @@
       %h2 window tinting professionals
 %section#icons{data: {type: 'background', speed: '10'}}
   .icon-wrapper.bcg
-    .text-center.scroll-to-table.pointer.hide
+    .text-center.scroll-to-table.pointer.hide.hidden-xs.hidden-sm
       = fa_icon 'chevron-circle-down 3x', class: 'white pointer table-scroll-icon'
     .col-xs-12.col-md-3.img-icon
       .col-xs-12
@@ -65,7 +65,7 @@
 %section#product{data: {type: 'background', speed: '10'}}
   .product-wrapper.bcg
     .col-xs-12.product-table
-      .scroll-to-difference.pointer.text-center.hide
+      .scroll-to-difference.pointer.text-center.hide.hidden-xs.hidden-sm
         = fa_icon 'chevron-circle-down 3x', class: 'pointer'
       %table#product_table.table.table-striped.table-hover
         .text-center
@@ -201,7 +201,7 @@
 %section#difference{data: {type: 'background', speed: '10'}}
   .about-3m
     .text-center
-      .scroll-top.pointer
+      .scroll-top.pointer.hidden-xs.hidden-sm
         %br
         = fa_icon 'chevron-circle-up 3x', class: 'white pointer'
     %h4 Window films do more than offer a wonderfull view. Window films can be a shield for better safety, security, and accident prevention. Window films can improve the light brought into your home. Window films can protect your skin from dangerous UV rays that cause cancer. Window films can protect the interior of your home by reducing fading by 85%.
@@ -211,23 +211,23 @@
 %section#bottom{data: {type: 'background', speed: '10'}}
   .footer-section
     .text-center.bottom-brand
-      %h1.hidden-xs Clear Innovations LLC - Window Films
-      %h6.visible-xs.white Clear Innovations LLC - Window Films
+      %h1.hidden-xs.hidden-sm Clear Innovations LLC - Window Films
+      %h6.visible-xs.visible-xs.white Clear Innovations LLC - Window Films
     .col-xs-12.col-md-4
       = image_tag 'logo.svg', class: 'blur'
     .col-xs-12.col-md-4
       %br
       .text-center
         %h4 Sitemap
-      .col-xs-2.col-sm-12.text-center
+      .col-xs-12.text-center
         = link_to 'Home', '/', class: 'white'
-      .col-xs-2.col-sm-12.text-center
+      .col-xs-12.text-center
         = link_to 'About', about_path, class: 'white'
-      .col-xs-2.col-sm-12.text-center
+      .col-xs-12.text-center
         = link_to 'Products', products_path, class: 'white'
-      .col-xs-2.col-sm-12.text-center
+      .col-xs-12.text-center
         = link_to 'Gallery', gallery_path, class: 'white'
-      .col-xs-2.col-sm-12.text-center
+      .col-xs-12.text-center
         = link_to 'Contact', '/', class: 'white'
     .col-xs-12.col-md-4
       %br

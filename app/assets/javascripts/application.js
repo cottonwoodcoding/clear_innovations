@@ -10,13 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require modernizr
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootbox
 //= require data-confirm-modal
 //= require Chart
-//= require turbolinks
-//= require modernizr
 //= require gumby
 //= require_tree .

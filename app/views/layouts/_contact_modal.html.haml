@@ -1,0 +1,40 @@
+/ Modal
+#contact_modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+        %h4#myModalLabel.modal-title Contact Us
+      .modal-body
+        %form#contact_modal_form.form-horizontal{:action => '/contact', :method => "post"}
+          = hidden_field_tag :path, current_uri = request.env['PATH_INFO']
+          = hidden_field_tag :authenticity_token, form_authenticity_token
+          .form-group
+            %span.col-md-1.col-md-offset-2.text-center
+              %i.fa.fa-user.large-text.hidden-sm.hidden-xs.hidden-sm.hidden-xs
+            .col-md-8
+              %input#fname.form-control{:name => "first_name", :placeholder => "First Name", :type => "text", :required => true}
+          .form-group
+            %span.col-md-1.col-md-offset-2.text-center
+              %i.fa.fa-user.large-text.hidden-sm.hidden-xs
+            .col-md-8
+              %input#lname.form-control{:name => "last_name", :placeholder => "Last Name", :type => "text", :required => true}
+          .form-group
+            %span.col-md-1.col-md-offset-2.text-center
+              %i.fa.fa-envelope-o.large-text.hidden-sm.hidden-xs
+            .col-md-8
+              %input#email.form-control{:name => "email", :placeholder => "Email Address", :type => "email", :required => true}
+          .form-group
+            %span.col-md-1.col-md-offset-2.text-center
+              %i.fa.fa-phone-square.large-text.hidden-sm.hidden-xs
+            .col-md-8
+              %input#phone.form-control{:name => "phone", :placeholder => "Phone", :type => "phone"}
+          .form-group
+            %span.col-md-1.col-md-offset-2.text-center
+              %i.fa.fa-pencil-square-o.large-text.hidden-sm.hidden-xs
+            .col-md-8
+              %textarea#message.form-control{:name => "body", :placeholder => "Enter your message for us here. We strive to get back to you within 24 hours.", :rows => "7", :required => true}
+          .modal-footer
+            %button.btn.btn-default.button-sm{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-sm.btn-primary{:type => "submit"} Submit

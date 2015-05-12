@@ -1,3 +1,26 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $(document).ready ->
+    if window.location.pathname == '/gallery'
+      $('.carousel').carousel()
+      $(document).on 'click', '.gallery-panel', ->
+        $(@).siblings('.collapse').collapse('toggle')
+
+      $('.panel-heading').each ->
+        id = $(@).attr('id').split("_")[1]
+        el = $("#album_thumbs_#{id}").elastislide(minItems: 3)
+
+      $('#image_shack_check').change ->
+        if $(@).is(':checked')
+          $("#image_shack_options .checkbox input").prop('checked', false)
+          $('#image_shack_options').removeClass('hide')
+        else
+          $("#image_shack_options .checkbox input").prop('checked', false)
+          $('#image_shack_options').addClass('hide')
+
+
+  $(document).on 'click', '.img-thumb', (e) ->
+    e.preventDefault()
+    e.stopPropagation()
+    number = parseInt($(@).attr('data-id'))
+    player = $(@).closest('.collapse').find('.carousel')
+    player.carousel(number)
