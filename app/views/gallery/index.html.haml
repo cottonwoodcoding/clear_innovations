@@ -8,7 +8,11 @@
   .col-xs-12.col-md-7
     %h2.text-center.white Our Work
     %hr
-    #gallery_accordion.panel-group{role: 'tablist', 'aria-multiselectable' => false}
+    .loading-gif
+      %img{src: image_path('loading.gif')}
+      .text-center.white
+        .lead Please Wait While Images Are Loaded
+    #gallery_accordion.panel-group.hide{role: 'tablist', 'aria-multiselectable' => false}
       - @album_hash.each_with_index do |album, i|
         .panel.panel-default.gallery-accordion.text-center.underline
           - album_id = album.first
@@ -47,8 +51,12 @@
     - if @entries.any?
       %h2.text-center.white Live Feed
       %hr
+      .loading-gif
+        %img{src: image_path('loading.gif')}
+        .text-center.white
+          .lead Please Wait While Life Feed Is Loaded
       - @entries.each do |e|
-        .feed-wrapper
+        .feed-wrapper.hide
           %h5.white
             = e[:title]
           .content-section.white

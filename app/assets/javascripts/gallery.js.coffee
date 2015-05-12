@@ -16,6 +16,10 @@ $ ->
         else
           $("#image_shack_options .checkbox input").prop('checked', false)
           $('#image_shack_options').addClass('hide')
+    $(window).load ->
+      $('.loading-gif').addClass('hide')
+      $('#gallery_accordion').removeClass('hide')
+      $('.feed-wrapper').removeClass('hide')
 
 
   $(document).on 'click', '.img-thumb', (e) ->
