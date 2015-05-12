@@ -20,7 +20,12 @@ gem 'modernizr-rails'
 gem 'feedjira'
 gem 'devise'
 gem 'sendgrid'
-gem 'rails_12factor', group: :production
+
+group :production do
+  gem 'rails_12factor', group: :production
+  gem 'unicorn', group: :production
+  gem 'heroku-deflater'
+end
 
 group :development, :test do
   gem 'pry'
