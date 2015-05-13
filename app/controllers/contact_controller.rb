@@ -3,6 +3,6 @@ class ContactController < ApplicationController
     unless Rails.env.development?
       ContactMailer.send_contact_info(params[:first_name], params[:last_name], params[:email], params[:phone], params[:body])
     end
-    render nothing: true
+    redirect_to :root
   end
 end
