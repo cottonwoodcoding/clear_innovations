@@ -8,7 +8,7 @@ class ContactMailer < ActionMailer::Base
     @phone = phone
     @email = email
     @body = body
-    mail(:to => 'ENV['mail_to', :subject => "#{first_name} #{last_name} has a question.")
+    mail(:to => ENV['mail_to'], :subject => "#{first_name} #{last_name} has a question.")
   end
 
 end
