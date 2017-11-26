@@ -22,18 +22,18 @@
           = link_to("About", about_path, class: 'nav-item')
         %li
           = link_to("Products", products_path, class: 'nav-item')
+        - if user_signed_in? || BlogPost.count > 0
+          %li
+            = link_to("Blog", blog_posts_path, class: 'nav-item')
         %li
           %a.nav-item.mail{href: '#'}
             = fa_icon 'envelope lg'
         %li
           = link_to 'http://facebook.com', class: 'nav-item', target: '_balnk' do
             = fa_icon 'facebook-square lg'
-        -# %li.dropdown
-        -#   %a.dropdown-toggle{data: {toggle: 'dropdown'}, href: '#'}
-        -#     = fa_icon 'gears lg', class: 'white'
-        -#   %ul.dropdown-menu
-        -#     %li
-        -#       - if user_signed_in?
-        -#         = link_to 'Logout', destroy_user_session_path, method: :delete
-        -#       - else
-        -#         = link_to 'Sign In', new_user_session_path
+        %li
+          - if user_signed_in?
+            = link_to 'Sign Out', destroy_user_session_path, class: 'nav-item', method: :delete 
+          - else
+            = link_to new_user_session_path, class: 'nav-item' do
+              = fa_icon 'gear'
