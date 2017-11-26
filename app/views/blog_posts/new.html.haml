@@ -1,2 +1,9 @@
-%h1 BlogPosts#new
-%p Find me in app/views/blog_posts/new.html.haml
+.container
+  = form_for @post do |f|
+    .form-group
+      = f.label :title
+      = f.text_field :title, class: 'form-control', required: true
+    .form-group
+      = f.text_area :content, class: 'tinymce', rows: 20, cols: 120
+    = f.submit nil, class: 'btn btn-default'
+  = tinymce

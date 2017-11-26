@@ -11,15 +11,29 @@ class BlogPostsController < ApplicationController
   end
 
   def edit
+    render :new
   end
 
   def create
+    @post = BlogPost.new(post_params)
+    if @post.save
+      redirect_to blog_posts_path
+    else
+      render :new
+    end
   end
 
   def update
+    if @post.update(post_params)
+      redirect_to blog_posts_path
+    else
+      render :new
+    end
   end
 
   def destroy
+    @post.destroy
+    redirect_to blog_posts_path
   end
 
   private
