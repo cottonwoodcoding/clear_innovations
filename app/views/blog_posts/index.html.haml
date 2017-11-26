@@ -1,15 +1,19 @@
 - user = user_signed_in?
-- if user
-  = link_to "New Post", new_blog_post_path
+.full-cover
+.base
 .row
-  .col-xs-12.col-sm-2
-    %h2.center Recent Posts
-    %ul
-      - @posts.each do |p|
-        %li
-          %a.truncate{href: "##{p.title}"} 
-            = p.title
-  .col-xs-12.col-sm-10
+  .col-xs-12.col-sm-3
+    .affix.front.menu
+      %br
+      - if user
+        = link_to "Create New Post", new_blog_post_path
+      %h2.center.white Recent Posts
+      %ul
+        - @posts.each do |p|
+          %li
+            %a.truncate{href: "##{p.title}"} 
+              = p.title
+  .col-xs-12.col-sm-8
     - @posts.each do |p|
       .panel.panel-default{ id: "#{p.title}" }
         .panel-heading
