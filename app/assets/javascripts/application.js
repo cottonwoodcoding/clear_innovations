@@ -16,7 +16,6 @@
 //= require bootstrap-sprockets
 //= require bootbox
 //= require data-confirm-modal
-//= require Chart
 //= require gumby
 //= require tinymce-jquery
 //= require_tree .
