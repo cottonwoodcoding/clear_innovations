@@ -18,3 +18,5 @@
 /config/email.yml
 /config/image_shack.yml
 .ruby-version
+
+/vendor/bundle
