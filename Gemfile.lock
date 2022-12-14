@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/ifad/data-confirm-modal.git
-  revision: 874f2079b3cca11c8585ac569a05598bfc0611ac
+  remote: https://github.com/ifad/data-confirm-modal.git
+  revision: 404119ad5bf7754c31af41e35935e365c69dcd92
   specs:
     data-confirm-modal (1.6.3)
       railties (>= 3.0)
@@ -104,24 +104,26 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.3.1)
     kgio (2.11.3)
-    loofah (2.6.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (1.0.0)
     mini_mime (1.0.2)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.8.0)
     minitest (5.14.1)
     modernizr-rails (2.7.1)
     multi_json (1.15.0)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (0.21.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    racc (1.6.1)
     rack (1.6.13)
     rack-test (0.6.3)
       rack (>= 1.0)
